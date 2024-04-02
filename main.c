@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Headers/FileProcessing.h"
 #include "Headers/Bitmap.h"
+#include "Headers/Histogram.h"
 
 
 int main(int argc, char **argv) {
@@ -29,6 +30,14 @@ int main(int argc, char **argv) {
     }
 
     read_pixels(file, btd);
+    HISTOGRAMTABLE *ht = create_histogramtable(16);
+    if (ht == NULL){
+        return 1;
+    }
+    create_histogram(btd, ht);
+    print_histogram_values(ht);
+    destroy_histogramtable(ht);
+
     destroy_bitmapdata(btd);
     closefile(file);
     return 0;

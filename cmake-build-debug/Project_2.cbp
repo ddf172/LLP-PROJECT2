@@ -88,6 +88,12 @@
 		<Unit filename="/mnt/c/Users/jakub/CLionProjects/Project 2/Headers/FileProcessing.h">
 			<Option target="Project_2"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/jakub/CLionProjects/Project 2/Headers/Histogram.h">
+			<Option target="Project_2"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/jakub/CLionProjects/Project 2/Histogram.c">
+			<Option target="Project_2"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/jakub/CLionProjects/Project 2/main.c">
 			<Option target="Project_2"/>
 		</Unit>

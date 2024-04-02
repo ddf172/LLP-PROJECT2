@@ -67,11 +67,6 @@ bool read_pixels(FILE *file, BITMAPDATA *btd){
             free(buffer);
             return false;
         }
-        printf("Buffer: ");
-        for (int j = 0; j < row_size; j++) {
-            printf("%02x ", buffer[j]);
-        }
-        printf("\n");
 
         for (int j=0; j<btd->BMIH->biWidth; j++){
             btd->pixels[i][j].B = buffer[j*3];

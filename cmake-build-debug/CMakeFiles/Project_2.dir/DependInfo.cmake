@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/jakub/CLionProjects/Project 2/Bitmap.c" "CMakeFiles/Project_2.dir/Bitmap.c.o" "gcc" "CMakeFiles/Project_2.dir/Bitmap.c.o.d"
   "/mnt/c/Users/jakub/CLionProjects/Project 2/FileProcessing.c" "CMakeFiles/Project_2.dir/FileProcessing.c.o" "gcc" "CMakeFiles/Project_2.dir/FileProcessing.c.o.d"
+  "/mnt/c/Users/jakub/CLionProjects/Project 2/Histogram.c" "CMakeFiles/Project_2.dir/Histogram.c.o" "gcc" "CMakeFiles/Project_2.dir/Histogram.c.o.d"
   "/mnt/c/Users/jakub/CLionProjects/Project 2/main.c" "CMakeFiles/Project_2.dir/main.c.o" "gcc" "CMakeFiles/Project_2.dir/main.c.o.d"
   )
 

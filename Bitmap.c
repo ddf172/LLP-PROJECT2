@@ -43,7 +43,7 @@ BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
         return NULL;
     }
     for (int i=0; i<BMIH->biHeight; i++){
-        PIXEL *row = (PIXEL *)malloc(sizeof(PIXEL) * BMIH->biWidth);
+        PIXEL *row = (PIXEL *)calloc(BMIH->biWidth, sizeof(PIXEL));
         if (row == NULL){
             for (int j=0; j<i; j++){
                 free(temp[j]);
@@ -62,6 +62,7 @@ BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
 
 bool destroy_bitmapdata(BITMAPDATA *btd){
     if (btd == NULL){
+        printf("btd is NULL error\n");
         return false;
     }
     if (btd->pixels != NULL) {

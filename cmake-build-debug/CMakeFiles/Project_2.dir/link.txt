@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/Project_2.dir/main.c.o CMakeFiles/Project_2.dir/FileProcessing.c.o CMakeFiles/Project_2.dir/Bitmap.c.o -o Project_2
+/usr/bin/cc -g CMakeFiles/Project_2.dir/main.c.o CMakeFiles/Project_2.dir/FileProcessing.c.o CMakeFiles/Project_2.dir/Bitmap.c.o CMakeFiles/Project_2.dir/Histogram.c.o -o Project_2

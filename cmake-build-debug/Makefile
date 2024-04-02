@@ -177,6 +177,30 @@ FileProcessing.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/FileProcessing.c.s
 .PHONY : FileProcessing.c.s
 
+Histogram.o: Histogram.c.o
+.PHONY : Histogram.o
+
+# target to build an object file
+Histogram.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/Histogram.c.o
+.PHONY : Histogram.c.o
+
+Histogram.i: Histogram.c.i
+.PHONY : Histogram.i
+
+# target to preprocess a source file
+Histogram.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/Histogram.c.i
+.PHONY : Histogram.c.i
+
+Histogram.s: Histogram.c.s
+.PHONY : Histogram.s
+
+# target to generate assembly for a file
+Histogram.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/Histogram.c.s
+.PHONY : Histogram.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... FileProcessing.o"
 	@echo "... FileProcessing.i"
 	@echo "... FileProcessing.s"
+	@echo "... Histogram.o"
+	@echo "... Histogram.i"
+	@echo "... Histogram.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
