@@ -35,8 +35,9 @@ int main(int argc, char **argv) {
         return 1;
     }
     create_histogram(btd, ht);
-    print_histogram_values(ht);
+    print_percentage_histogram_values(ht, (float)(btd->BMIH->biWidth * btd->BMIH->biHeight));
     destroy_histogramtable(ht);
+
 
     destroy_bitmapdata(btd);
     closefile(file);

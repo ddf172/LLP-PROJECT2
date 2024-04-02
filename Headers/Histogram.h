@@ -17,6 +17,7 @@ extern HISTOGRAMTABLE *create_histogramtable(int split);
 extern bool destroy_histogramtable(HISTOGRAMTABLE *ht);
 extern bool create_histogram(BITMAPDATA *btd, HISTOGRAMTABLE *ht);
 extern void print_histogram_values(HISTOGRAMTABLE *ht);
+extern void print_percentage_histogram_values(HISTOGRAMTABLE *ht, float total_pixels);
 
 
 #endif //PROJECT_2_HISTOGRAM_H

@@ -80,3 +80,21 @@ void print_histogram_values(HISTOGRAMTABLE *ht) {
         printf("Blue %d: %d\n", i, ht->blue[i]);
     }
 }
+
+void print_percentage_histogram_values(HISTOGRAMTABLE *ht, float total_pixels) {
+    if (ht == NULL) {
+        return;
+    }
+    printf("Blue:\n");
+    for (int i = 0; i < ht->split; i++) {
+        printf("    %d-%d : %.2f%%\n", i*ht->split, (i+1)*ht->split-1, (float) ht->blue[i] / total_pixels *100);
+    }
+    printf("Green:\n");
+    for (int i = 0; i < ht->split; i++) {
+        printf("    %d-%d : %.2f%%\n", i*ht->split, (i+1)*ht->split-1, (float) ht->green[i] / total_pixels * 100);
+    }
+    printf("Red:\n");
+    for (int i = 0; i < ht->split; i++) {
+        printf("    %d-%d : %.2f%%\n", i*ht->split, (i+1)*ht->split-1, (float) ht->red[i] / total_pixels * 100);
+    }
+}

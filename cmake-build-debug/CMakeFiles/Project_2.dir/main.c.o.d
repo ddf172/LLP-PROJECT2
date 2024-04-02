@@ -54,4 +54,5 @@ CMakeFiles/Project_2.dir/main.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Histogram.h
