@@ -30,6 +30,37 @@ void print_info_header(BITMAPINFOHEADER *BMIH){
     printf("biClrImportant: %d\n", BMIH->biClrImportant);
 }
 
+PIXEL **create_pixel_array(size_t height, size_t width){
+    PIXEL **temp = (PIXEL **) malloc(sizeof(PIXEL *)*height);
+    if (temp == NULL){
+        return NULL;
+    }
+    for (int i=0; i<height; i++){
+        PIXEL *row = (PIXEL *)calloc(width, sizeof(PIXEL));
+        if (row == NULL){
+            for (int j=0; j<i; j++){
+                free(temp[j]);
+            }
+            free(temp);
+            return NULL;
+        }
+        temp[i] = row;
+        row = NULL;
+    }
+    return temp;
+}
+
+bool destroy_pixel_array(PIXEL **pixels, size_t height){
+    if (pixels == NULL){
+        return false;
+    }
+    for (int i=0; i<height; i++){
+        free(pixels[i]);
+    }
+    free(pixels);
+    return true;
+}
+
 BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
     BITMAPDATA *btd = malloc(sizeof(BITMAPDATA));
     if (btd == NULL || BMFH == NULL || BMIH == NULL){
@@ -37,23 +68,10 @@ BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
     }
     btd->BMFH = BMFH;
     btd->BMIH = BMIH;
-    PIXEL **temp = (PIXEL **) malloc(sizeof(PIXEL *)*BMIH->biHeight);
-    if (temp == NULL){
+    PIXEL **temp = create_pixel_array(BMIH->biHeight, BMIH->biWidth);
+    if (temp == NULL) {
         free(btd);
         return NULL;
-    }
-    for (int i=0; i<BMIH->biHeight; i++){
-        PIXEL *row = (PIXEL *)calloc(BMIH->biWidth, sizeof(PIXEL));
-        if (row == NULL){
-            for (int j=0; j<i; j++){
-                free(temp[j]);
-            }
-            free(temp);
-            free(btd);
-            return NULL;
-        }
-        temp[i] = row;
-        row = NULL;
     }
     btd->pixels = temp;
     temp = NULL;
@@ -70,10 +88,7 @@ bool destroy_bitmapdata(BITMAPDATA *btd){
             printf("BMIH is NULL error\n");
             return false;
         }
-        for (int i = 0; i < btd->BMIH->biHeight; i++) {
-            free(btd->pixels[i]);
-        }
-        free(btd->pixels);
+        destroy_pixel_array(btd->pixels, btd->BMIH->biHeight);
     }
     if (btd->BMFH != NULL){
         free(btd->BMFH);

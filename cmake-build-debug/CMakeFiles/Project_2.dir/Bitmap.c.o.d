@@ -1,7 +1,7 @@
 CMakeFiles/Project_2.dir/Bitmap.c.o: \
- /mnt/c/Users/jakub/CLionProjects/Project\ 2/Bitmap.c \
+ /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Bitmap.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h \
+ /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Bitmap.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

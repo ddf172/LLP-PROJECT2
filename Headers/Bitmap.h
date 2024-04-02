@@ -37,9 +37,9 @@ typedef struct tagBITMAPINFOHEADER {
 } BITMAPINFOHEADER, *LPBITMAPINFOHEADER, *PBITMAPINFOHEADER;
 
 typedef struct{
-    DWORD R;
-    DWORD G;
-    DWORD B;
+    int R;
+    int G;
+    int B;
 } PIXEL;
 
 typedef struct{
@@ -50,6 +50,8 @@ typedef struct{
 
 extern void print_file_header(BITMAPFILEHEADER *BMFH);
 extern void print_info_header(BITMAPINFOHEADER *BMIH);
+extern PIXEL **create_pixel_array(size_t height, size_t width);
+extern bool destroy_pixel_array(PIXEL **pixels, size_t height);
 extern BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH);
 bool destroy_bitmapdata(BITMAPDATA *btd);
 extern int get_padding(BITMAPINFOHEADER *BMIH);

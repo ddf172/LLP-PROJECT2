@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/jakub/CLionProjects/Project 2"
+CMAKE_SOURCE_DIR = /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug"
+CMAKE_BINARY_DIR = /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ FileProcessing.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/FileProcessing.c.s
 .PHONY : FileProcessing.c.s
 
+GrayScale.o: GrayScale.c.o
+.PHONY : GrayScale.o
+
+# target to build an object file
+GrayScale.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/GrayScale.c.o
+.PHONY : GrayScale.c.o
+
+GrayScale.i: GrayScale.c.i
+.PHONY : GrayScale.i
+
+# target to preprocess a source file
+GrayScale.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/GrayScale.c.i
+.PHONY : GrayScale.c.i
+
+GrayScale.s: GrayScale.c.s
+.PHONY : GrayScale.s
+
+# target to generate assembly for a file
+GrayScale.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_2.dir/build.make CMakeFiles/Project_2.dir/GrayScale.c.s
+.PHONY : GrayScale.c.s
+
 Histogram.o: Histogram.c.o
 .PHONY : Histogram.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... FileProcessing.o"
 	@echo "... FileProcessing.i"
 	@echo "... FileProcessing.s"
+	@echo "... GrayScale.o"
+	@echo "... GrayScale.i"
+	@echo "... GrayScale.s"
 	@echo "... Histogram.o"
 	@echo "... Histogram.i"
 	@echo "... Histogram.s"

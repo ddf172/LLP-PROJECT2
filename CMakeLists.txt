@@ -10,4 +10,6 @@ add_executable(Project_2 main.c
         Bitmap.c
         Headers/Histogram.h
         Histogram.c
+        Headers/GrayScale.h
+        GrayScale.c
 )

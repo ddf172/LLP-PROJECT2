@@ -1,3 +1,3 @@
-/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles/Project_2.dir
-/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles/Project_2.dir
+/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

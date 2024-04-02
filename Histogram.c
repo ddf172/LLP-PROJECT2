@@ -59,9 +59,9 @@ bool create_histogram(BITMAPDATA *btd, HISTOGRAMTABLE *ht) {
     }
     for (int i = 0; i < btd->BMIH->biHeight; i++) {
         for (int j = 0; j < btd->BMIH->biWidth; j++) {
-            DWORD red = btd->pixels[i][j].R;
-            DWORD green = btd->pixels[i][j].G;
-            DWORD blue = btd->pixels[i][j].B;
+            int red = btd->pixels[i][j].R;
+            int green = btd->pixels[i][j].G;
+            int blue = btd->pixels[i][j].B;
             ht->red[red / ht->split]++;
             ht->green[green / ht->split]++;
             ht->blue[blue / ht->split]++;
