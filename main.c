@@ -16,7 +16,6 @@ int main(int argc, char **argv) {
     if (!read_file_header(file, BMFH)){
         return 1;
     }
-
     BITMAPINFOHEADER *BMIH = malloc(sizeof(BITMAPINFOHEADER));
     if (BMIH == NULL){
         return 1;
@@ -24,21 +23,13 @@ int main(int argc, char **argv) {
     if (!read_info_header(file, BMIH)){
         return 1;
     }
-    printf("%d\n", BMIH->biWidth);
     BITMAPDATA *btd = create_bitmapdata(BMFH, BMIH);
     if (btd == NULL){
         return 1;
     }
-    read_pixels(file, btd);
 
-    for(int i=0; i<=BMIH->biHeight; i++){
-        for(int j=0; j<=BMIH->biWidth; j++){
-            printf("%x ", btd->pixels[i][j]);
-        }
-        printf("\n");
-    }
-    free(BMIH);
-    free(BMFH);
+    read_pixels(file, btd);
+    destroy_bitmapdata(btd);
     closefile(file);
     return 0;
 }

@@ -1,6 +1,4 @@
 #include "Headers/Bitmap.h"
-#include <stdio.h>
-#include "stdlib.h"
 
 void print_file_header(BITMAPFILEHEADER *BMFH){
     if (BMFH == NULL){
@@ -39,13 +37,13 @@ BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
     }
     btd->BMFH = BMFH;
     btd->BMIH = BMIH;
-    DWORD **temp = (DWORD **) malloc(sizeof(int *)*BMIH->biHeight);
+    PIXEL **temp = (PIXEL **) malloc(sizeof(PIXEL *)*BMIH->biHeight);
     if (temp == NULL){
         free(btd);
         return NULL;
     }
-    for (int i=0; i<=BMIH->biHeight; i++){
-        DWORD *row = (DWORD *)malloc(sizeof(int) * BMIH->biWidth);
+    for (int i=0; i<BMIH->biHeight; i++){
+        PIXEL *row = (PIXEL *)malloc(sizeof(PIXEL) * BMIH->biWidth);
         if (row == NULL){
             for (int j=0; j<i; j++){
                 free(temp[j]);
@@ -60,6 +58,30 @@ BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
     btd->pixels = temp;
     temp = NULL;
     return btd;
+}
+
+bool destroy_bitmapdata(BITMAPDATA *btd){
+    if (btd == NULL){
+        return false;
+    }
+    if (btd->pixels != NULL) {
+        if (btd->BMIH == NULL){
+            printf("BMIH is NULL error\n");
+            return false;
+        }
+        for (int i = 0; i < btd->BMIH->biHeight; i++) {
+            free(btd->pixels[i]);
+        }
+        free(btd->pixels);
+    }
+    if (btd->BMFH != NULL){
+        free(btd->BMFH);
+    }
+    if (btd->BMIH != NULL){
+        free(btd->BMIH);
+    }
+    free(btd);
+    return true;
 }
 
 int get_padding(BITMAPINFOHEADER *BMIH){

@@ -62,14 +62,23 @@ bool read_pixels(FILE *file, BITMAPDATA *btd){
         return false;
     }
     fseek(file, btd->BMFH->bfOffBits, SEEK_SET);
-    for (int i=0; i<=btd->BMIH->biHeight; i++){
+    for (int i=0; i<btd->BMIH->biHeight; i++){
         if (fread(buffer, row_size, 1, file) != 1){
             free(buffer);
             return false;
         }
-        for (int j=0; j<=btd->BMIH->biWidth; j++){
-            btd->pixels[i][j] = *(DWORD *)(buffer + j * (btd->BMIH->biBitCount)/8);
+        printf("Buffer: ");
+        for (int j = 0; j < row_size; j++) {
+            printf("%02x ", buffer[j]);
         }
+        printf("\n");
+
+        for (int j=0; j<btd->BMIH->biWidth; j++){
+            btd->pixels[i][j].B = buffer[j*3];
+            btd->pixels[i][j].G = buffer[j*3+1];
+            btd->pixels[i][j].R = buffer[j*3+2];
+        }
+        fseek(file, get_padding(btd->BMIH), SEEK_CUR);
     }
     free(buffer);
     return true;

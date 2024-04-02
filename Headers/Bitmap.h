@@ -2,6 +2,10 @@
 #define PROJECT_2_BITMAP_H
 
 #include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+
 
 
 typedef uint16_t WORD;
@@ -33,14 +37,21 @@ typedef struct tagBITMAPINFOHEADER {
 } BITMAPINFOHEADER, *LPBITMAPINFOHEADER, *PBITMAPINFOHEADER;
 
 typedef struct{
+    DWORD R;
+    DWORD G;
+    DWORD B;
+} PIXEL;
+
+typedef struct{
     BITMAPINFOHEADER *BMIH;
     BITMAPFILEHEADER *BMFH;
-    DWORD **pixels;
+    PIXEL **pixels;
 } BITMAPDATA;
 
 extern void print_file_header(BITMAPFILEHEADER *BMFH);
 extern void print_info_header(BITMAPINFOHEADER *BMIH);
 extern BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH);
+bool destroy_bitmapdata(BITMAPDATA *btd);
 extern int get_padding(BITMAPINFOHEADER *BMIH);
 
 
