@@ -1,7 +1,7 @@
 CMakeFiles/Project_2.dir/FileProcessing.c.o: \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/FileProcessing.c \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/FileProcessing.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/FileProcessing.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/FileProcessing.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -51,8 +51,8 @@ CMakeFiles/Project_2.dir/FileProcessing.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Bitmap.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Bitmap.h
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h

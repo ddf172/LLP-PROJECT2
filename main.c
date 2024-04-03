@@ -6,7 +6,7 @@
 
 
 int main(int argc, char **argv) {
-    FILE *file = openfile("test.bmp");
+    FILE *file = open_file("test.bmp");
     if (file == NULL){
         return 1;
     }
@@ -32,18 +32,7 @@ int main(int argc, char **argv) {
 
     read_pixels(file, btd);
 
-    PIXEL **gray_scale = create_gray_scale_pixel_array(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
-    if (gray_scale == NULL){
-        return 1;
-    }
-    for(int i = 0; i < btd->BMIH->biHeight; i++){
-        for(int j = 0; j < btd->BMIH->biWidth; j++){
-            printf("%d %d %d | ", gray_scale[i][j].R, gray_scale[i][j].G, gray_scale[i][j].B);
-        }
-        printf("\n");
-    }
-
     destroy_bitmapdata(btd);
-    closefile(file);
+    close_file(file);
     return 0;
 }

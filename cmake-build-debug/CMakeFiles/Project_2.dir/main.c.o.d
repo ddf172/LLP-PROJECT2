@@ -1,5 +1,5 @@
 CMakeFiles/Project_2.dir/main.c.o: \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/main.c \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/main.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -23,7 +23,7 @@ CMakeFiles/Project_2.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/FileProcessing.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/FileProcessing.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
@@ -50,10 +50,10 @@ CMakeFiles/Project_2.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Bitmap.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Bitmap.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/Histogram.h \
- /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Headers/GrayScale.h
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Bitmap.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/Histogram.h \
+ /mnt/c/Users/jakub/CLionProjects/Project\ 2/Headers/GrayScale.h

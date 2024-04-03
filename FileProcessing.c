@@ -1,7 +1,7 @@
 #include "Headers/FileProcessing.h"
 #include "Headers/Bitmap.h"
 
-FILE *openfile(char *filename) {
+FILE *open_file(char *filename) {
     FILE *file = fopen(filename, "r");
     if (!file) {
         printf("File does not exist");
@@ -78,12 +78,95 @@ bool read_pixels(FILE *file, BITMAPDATA *btd){
     free(buffer);
     return true;
 }
+FILE *create_file(char *filename) {
+    if (filename == NULL) {
+        return NULL;
+    }
+    if (fopen(filename, "r") != NULL) {
+        printf("File already exists");
+        return NULL;
+    }
+    FILE *file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("File creation error");
+        return NULL;
+    }
+    return file;
+}
 
-bool closefile(FILE *file) {
+bool write_bytes(FILE *file, unsigned char byte, size_t number) {
+    if (file == NULL) {
+        return false;
+    }
+    if (fwrite(&byte, sizeof(unsigned char), number, file) != 1) {
+        return false;
+    }
+    return true;
+}
+
+bool write_headers(FILE *file, BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
+    if (file == NULL || BMFH == NULL || BMIH == NULL){
+        return false;
+    }
+    if (fwrite(&BMFH->bfType, sizeof(BMFH->bfType), 1, file) != 1) {return false;}
+    if (fwrite(&BMFH->bfSize, sizeof(BMFH->bfSize), 1, file) != 1) {return false;}
+    if (fwrite(&BMFH->bfReserved1, sizeof(BMFH->bfReserved1), 1, file) != 1) {return false;}
+    if (fwrite(&BMFH->bfReserved2, sizeof(BMFH->bfReserved2), 1, file) != 1) {return false;}
+    if (fwrite(&BMFH->bfOffBits, sizeof(BMFH->bfOffBits), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biSize, sizeof(BMIH->biSize), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biWidth, sizeof(BMIH->biWidth), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biHeight, sizeof(BMIH->biHeight), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biPlanes, sizeof(BMIH->biPlanes), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biBitCount, sizeof(BMIH->biBitCount), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biCompression, sizeof(BMIH->biCompression), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biSizeImage, sizeof(BMIH->biSizeImage), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biXPelsPerMeter, sizeof(BMIH->biXPelsPerMeter), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biYPelsPerMeter, sizeof(BMIH->biYPelsPerMeter), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biClrUsed, sizeof(BMIH->biClrUsed), 1, file) != 1) {return false;}
+    if (fwrite(&BMIH->biClrImportant, sizeof(BMIH->biClrImportant), 1, file) != 1) {return false;}
+    return true;
+}
+
+bool write_offset(FILE *file, int offset) {
+    if (file == NULL) {
+        return false;
+    }
+    const unsigned int headers_end = 54;
+    if (fseek(file, headers_end+1, SEEK_SET) != 0) {
+        return false;
+    }
+    unsigned int bytes_to_write = offset-(headers_end+1);
+    for (int i = 0; i < bytes_to_write; i++) {
+        if (!write_bytes(file, 0x00, 1)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool write_pixels(FILE *file, PIXEL **pixels, int height,int width, int offset){
+    if (file == NULL || pixels == NULL){
+        return  false;
+    }
+    fseek(file, offset, SEEK_SET);
+
+}
+
+bool write_to_file(FILE *file, BITMAPINFOHEADER *BMIH, BITMAPFILEHEADER *BMFH,  PIXEL **pixels){
+    if (file == NULL || BMIH == NULL || BMFH == NULL || pixels == NULL){
+        return false;
+    }
+    int row_size = ((BMIH->biBitCount * BMIH->biWidth + 31) / 32) * 4;
+    int padding = get_padding(BMIH);
+    unsigned char *buffer = malloc(sizeof(unsigned char) * row_size);
+
+
+}
+
+bool close_file(FILE *file) {
     if (fclose(file) != 0) {
         return false;
     }
     file = NULL;
     return true;
 }
-

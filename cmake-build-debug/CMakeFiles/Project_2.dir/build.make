@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2
+CMAKE_SOURCE_DIR = "/mnt/c/Users/jakub/CLionProjects/Project 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug
+CMAKE_BINARY_DIR = "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project_2.dir/depend.make
@@ -70,74 +70,74 @@ include CMakeFiles/Project_2.dir/progress.make
 include CMakeFiles/Project_2.dir/flags.make
 
 CMakeFiles/Project_2.dir/main.c.o: CMakeFiles/Project_2.dir/flags.make
-CMakeFiles/Project_2.dir/main.c.o: /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/main.c
+CMakeFiles/Project_2.dir/main.c.o: /mnt/c/Users/jakub/CLionProjects/Project\ 2/main.c
 CMakeFiles/Project_2.dir/main.c.o: CMakeFiles/Project_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Project_2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/main.c.o -MF CMakeFiles/Project_2.dir/main.c.o.d -o CMakeFiles/Project_2.dir/main.c.o -c /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Project_2.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/main.c.o -MF CMakeFiles/Project_2.dir/main.c.o.d -o CMakeFiles/Project_2.dir/main.c.o -c "/mnt/c/Users/jakub/CLionProjects/Project 2/main.c"
 
 CMakeFiles/Project_2.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Project_2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/main.c > CMakeFiles/Project_2.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/jakub/CLionProjects/Project 2/main.c" > CMakeFiles/Project_2.dir/main.c.i
 
 CMakeFiles/Project_2.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Project_2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/main.c -o CMakeFiles/Project_2.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/jakub/CLionProjects/Project 2/main.c" -o CMakeFiles/Project_2.dir/main.c.s
 
 CMakeFiles/Project_2.dir/FileProcessing.c.o: CMakeFiles/Project_2.dir/flags.make
-CMakeFiles/Project_2.dir/FileProcessing.c.o: /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/FileProcessing.c
+CMakeFiles/Project_2.dir/FileProcessing.c.o: /mnt/c/Users/jakub/CLionProjects/Project\ 2/FileProcessing.c
 CMakeFiles/Project_2.dir/FileProcessing.c.o: CMakeFiles/Project_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project_2.dir/FileProcessing.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/FileProcessing.c.o -MF CMakeFiles/Project_2.dir/FileProcessing.c.o.d -o CMakeFiles/Project_2.dir/FileProcessing.c.o -c /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/FileProcessing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Project_2.dir/FileProcessing.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/FileProcessing.c.o -MF CMakeFiles/Project_2.dir/FileProcessing.c.o.d -o CMakeFiles/Project_2.dir/FileProcessing.c.o -c "/mnt/c/Users/jakub/CLionProjects/Project 2/FileProcessing.c"
 
 CMakeFiles/Project_2.dir/FileProcessing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Project_2.dir/FileProcessing.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/FileProcessing.c > CMakeFiles/Project_2.dir/FileProcessing.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/jakub/CLionProjects/Project 2/FileProcessing.c" > CMakeFiles/Project_2.dir/FileProcessing.c.i
 
 CMakeFiles/Project_2.dir/FileProcessing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Project_2.dir/FileProcessing.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/FileProcessing.c -o CMakeFiles/Project_2.dir/FileProcessing.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/jakub/CLionProjects/Project 2/FileProcessing.c" -o CMakeFiles/Project_2.dir/FileProcessing.c.s
 
 CMakeFiles/Project_2.dir/Bitmap.c.o: CMakeFiles/Project_2.dir/flags.make
-CMakeFiles/Project_2.dir/Bitmap.c.o: /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Bitmap.c
+CMakeFiles/Project_2.dir/Bitmap.c.o: /mnt/c/Users/jakub/CLionProjects/Project\ 2/Bitmap.c
 CMakeFiles/Project_2.dir/Bitmap.c.o: CMakeFiles/Project_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project_2.dir/Bitmap.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/Bitmap.c.o -MF CMakeFiles/Project_2.dir/Bitmap.c.o.d -o CMakeFiles/Project_2.dir/Bitmap.c.o -c /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Bitmap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Project_2.dir/Bitmap.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/Bitmap.c.o -MF CMakeFiles/Project_2.dir/Bitmap.c.o.d -o CMakeFiles/Project_2.dir/Bitmap.c.o -c "/mnt/c/Users/jakub/CLionProjects/Project 2/Bitmap.c"
 
 CMakeFiles/Project_2.dir/Bitmap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Project_2.dir/Bitmap.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Bitmap.c > CMakeFiles/Project_2.dir/Bitmap.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/jakub/CLionProjects/Project 2/Bitmap.c" > CMakeFiles/Project_2.dir/Bitmap.c.i
 
 CMakeFiles/Project_2.dir/Bitmap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Project_2.dir/Bitmap.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Bitmap.c -o CMakeFiles/Project_2.dir/Bitmap.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/jakub/CLionProjects/Project 2/Bitmap.c" -o CMakeFiles/Project_2.dir/Bitmap.c.s
 
 CMakeFiles/Project_2.dir/Histogram.c.o: CMakeFiles/Project_2.dir/flags.make
-CMakeFiles/Project_2.dir/Histogram.c.o: /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Histogram.c
+CMakeFiles/Project_2.dir/Histogram.c.o: /mnt/c/Users/jakub/CLionProjects/Project\ 2/Histogram.c
 CMakeFiles/Project_2.dir/Histogram.c.o: CMakeFiles/Project_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project_2.dir/Histogram.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/Histogram.c.o -MF CMakeFiles/Project_2.dir/Histogram.c.o.d -o CMakeFiles/Project_2.dir/Histogram.c.o -c /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Histogram.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Project_2.dir/Histogram.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/Histogram.c.o -MF CMakeFiles/Project_2.dir/Histogram.c.o.d -o CMakeFiles/Project_2.dir/Histogram.c.o -c "/mnt/c/Users/jakub/CLionProjects/Project 2/Histogram.c"
 
 CMakeFiles/Project_2.dir/Histogram.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Project_2.dir/Histogram.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Histogram.c > CMakeFiles/Project_2.dir/Histogram.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/jakub/CLionProjects/Project 2/Histogram.c" > CMakeFiles/Project_2.dir/Histogram.c.i
 
 CMakeFiles/Project_2.dir/Histogram.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Project_2.dir/Histogram.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/Histogram.c -o CMakeFiles/Project_2.dir/Histogram.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/jakub/CLionProjects/Project 2/Histogram.c" -o CMakeFiles/Project_2.dir/Histogram.c.s
 
 CMakeFiles/Project_2.dir/GrayScale.c.o: CMakeFiles/Project_2.dir/flags.make
-CMakeFiles/Project_2.dir/GrayScale.c.o: /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/GrayScale.c
+CMakeFiles/Project_2.dir/GrayScale.c.o: /mnt/c/Users/jakub/CLionProjects/Project\ 2/GrayScale.c
 CMakeFiles/Project_2.dir/GrayScale.c.o: CMakeFiles/Project_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Project_2.dir/GrayScale.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/GrayScale.c.o -MF CMakeFiles/Project_2.dir/GrayScale.c.o.d -o CMakeFiles/Project_2.dir/GrayScale.c.o -c /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/GrayScale.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Project_2.dir/GrayScale.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Project_2.dir/GrayScale.c.o -MF CMakeFiles/Project_2.dir/GrayScale.c.o.d -o CMakeFiles/Project_2.dir/GrayScale.c.o -c "/mnt/c/Users/jakub/CLionProjects/Project 2/GrayScale.c"
 
 CMakeFiles/Project_2.dir/GrayScale.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Project_2.dir/GrayScale.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/GrayScale.c > CMakeFiles/Project_2.dir/GrayScale.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/jakub/CLionProjects/Project 2/GrayScale.c" > CMakeFiles/Project_2.dir/GrayScale.c.i
 
 CMakeFiles/Project_2.dir/GrayScale.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Project_2.dir/GrayScale.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/GrayScale.c -o CMakeFiles/Project_2.dir/GrayScale.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/jakub/CLionProjects/Project 2/GrayScale.c" -o CMakeFiles/Project_2.dir/GrayScale.c.s
 
 # Object files for target Project_2
 Project_2_OBJECTS = \
@@ -157,7 +157,7 @@ Project_2: CMakeFiles/Project_2.dir/Histogram.c.o
 Project_2: CMakeFiles/Project_2.dir/GrayScale.c.o
 Project_2: CMakeFiles/Project_2.dir/build.make
 Project_2: CMakeFiles/Project_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Project_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Project_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -169,6 +169,6 @@ CMakeFiles/Project_2.dir/clean:
 .PHONY : CMakeFiles/Project_2.dir/clean
 
 CMakeFiles/Project_2.dir/depend:
-	cd /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2 /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2 /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug /mnt/c/Users/ddf/CLionProjects/LLP-PROJECT2/cmake-build-debug/CMakeFiles/Project_2.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/jakub/CLionProjects/Project 2" "/mnt/c/Users/jakub/CLionProjects/Project 2" "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug" "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug" "/mnt/c/Users/jakub/CLionProjects/Project 2/cmake-build-debug/CMakeFiles/Project_2.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Project_2.dir/depend
 
