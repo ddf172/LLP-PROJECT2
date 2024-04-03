@@ -127,7 +127,7 @@ bool write_headers(FILE *file, BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH){
     return true;
 }
 
-bool write_offset(FILE *file, int offset) {
+bool write_offset(FILE *file, unsigned int offset) {
     if (file == NULL) {
         return false;
     }
@@ -144,23 +144,51 @@ bool write_offset(FILE *file, int offset) {
     return true;
 }
 
-bool write_pixels(FILE *file, PIXEL **pixels, int height,int width, int offset){
+bool write_pixels(FILE *file, PIXEL **pixels,unsigned int height,unsigned int width,unsigned int offset,unsigned int padding,unsigned int bit_count){
     if (file == NULL || pixels == NULL){
         return  false;
     }
     fseek(file, offset, SEEK_SET);
-
+    int row_size = (((signed int) bit_count * (signed int) width + 31) / 32) * 4;
+    unsigned char *buffer = malloc(sizeof(unsigned char) * row_size);
+    if (buffer == NULL){
+        return false;
+    }
+    for (int i=0; i<height; i++){
+        for (int j=0; j<width; j++){
+            buffer[j*3] = pixels[i][j].B;
+            buffer[j*3+1] = pixels[i][j].G;
+            buffer[j*3+2] = pixels[i][j].R;
+        }
+        if (fwrite(buffer, row_size, 1, file) != 1){
+            free(buffer);
+            return false;
+        }
+        for (int j=0; j<padding; j++){
+            if (!write_bytes(file, 0x00, 1)){
+                free(buffer);
+                return false;
+            }
+        }
+    }
+    free(buffer);
+    return true;
 }
 
 bool write_to_file(FILE *file, BITMAPINFOHEADER *BMIH, BITMAPFILEHEADER *BMFH,  PIXEL **pixels){
     if (file == NULL || BMIH == NULL || BMFH == NULL || pixels == NULL){
         return false;
     }
-    int row_size = ((BMIH->biBitCount * BMIH->biWidth + 31) / 32) * 4;
     int padding = get_padding(BMIH);
-    unsigned char *buffer = malloc(sizeof(unsigned char) * row_size);
-
-
+    if (!write_headers(file, BMFH, BMIH)){
+        return false;
+    }
+    if (!write_offset(file, BMFH->bfOffBits)){
+        return false;}
+    if (!write_pixels(file, pixels, BMIH->biHeight, BMIH->biWidth, BMFH->bfOffBits, padding, BMIH->biBitCount)){
+        return false;
+    }
+    return true;
 }
 
 bool close_file(FILE *file) {

@@ -29,8 +29,17 @@ int main(int argc, char **argv) {
     if (btd == NULL){
         return 1;
     }
-
     read_pixels(file, btd);
+
+    FILE *file2 = create_file("test2.bmp");
+    if (file2 == NULL){
+        return 1;
+    }
+    PIXEL **gray_scale = create_gray_scale_pixel_array(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
+    if (gray_scale == NULL){
+        return 1;
+    }
+    write_to_file(file2, btd->BMIH, btd->BMFH, gray_scale);
 
     destroy_bitmapdata(btd);
     close_file(file);
