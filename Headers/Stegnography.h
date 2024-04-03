@@ -1,0 +1,8 @@
+//
+// Created by jakub on 03.04.2024.
+//
+
+#ifndef PROJECT_2_STEGNOGRAPHY_H
+#define PROJECT_2_STEGNOGRAPHY_H
+
+#endif //PROJECT_2_STEGNOGRAPHY_H

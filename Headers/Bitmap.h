@@ -55,6 +55,9 @@ extern bool destroy_pixel_array(PIXEL **pixels, size_t height);
 extern BITMAPDATA *create_bitmapdata(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH);
 bool destroy_bitmapdata(BITMAPDATA *btd);
 extern int get_padding(BITMAPINFOHEADER *BMIH);
-
+extern unsigned char **create_hex_array(size_t height, size_t width);
+extern unsigned char **create_hex_array_from_pixels(PIXEL **pixels, size_t height, size_t width);
+extern bool destroy_hex_array(unsigned char **hex_array, size_t height);
+extern PIXEL **create_pixel_array_from_hex(unsigned char **hex_array, size_t height, size_t width);
 
 #endif //PROJECT_2_BITMAP_H

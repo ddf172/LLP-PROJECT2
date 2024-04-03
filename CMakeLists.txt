@@ -12,4 +12,7 @@ add_executable(Project_2 main.c
         Histogram.c
         Headers/GrayScale.h
         GrayScale.c
+        Headers/Stegnography.h
+        Stegnography.c
+
 )
