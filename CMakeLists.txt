@@ -14,5 +14,7 @@ add_executable(Project_2 main.c
         GrayScale.c
         Headers/Stegnography.h
         Stegnography.c
+        launcher.c
+        Headers/launcher.h
 
 )

@@ -11,6 +11,7 @@ void encode_char(unsigned char character, unsigned char *hex_array_row, int widt
         binary_character[i] = (character >> i) & 0x01;
     }
 
+
     for (int i=0; i<8; i++){
         if (binary_character[i] == 1){
             hex_array_row[i] = hex_array_row[i] | 0x01;
@@ -33,7 +34,7 @@ unsigned char decode_char(const unsigned char *hex_array_row, int width){
     return character;
 }
 
-void encode_message(const char *message, unsigned char **hex_array,size_t message_length, size_t height, size_t width){
+void encode_message(const unsigned char *message, unsigned char **hex_array,size_t message_length, size_t height, size_t width){
     if (message == NULL || hex_array == NULL){
         return;
     }
@@ -45,8 +46,9 @@ void encode_message(const char *message, unsigned char **hex_array,size_t messag
         printf("Width is less than 8\n");
         return;
     }
+    encode_char((unsigned char)message_length, hex_array[0],(int)width);
     for (int i=0; i<message_length; i++){
-        encode_char(message[i], hex_array[i],(int)width);
+        encode_char(message[i], hex_array[i+1],(int)width);
     }
 }
 
@@ -65,12 +67,13 @@ unsigned char *decode_message(unsigned char **hex_array, size_t height, size_t w
         return NULL;
     }
 
-    unsigned char *message = (unsigned char *) calloc(message_length, sizeof(unsigned char));
+    unsigned char *message = (unsigned char *) calloc(message_length+1, sizeof(unsigned char));
     if (message == NULL){
         return NULL;
     }
     for (int i=0; i<message_length; i++){
-        message[i] = decode_char(hex_array[i], (int)width);
+        message[i] = decode_char(hex_array[i+1], (int)width);
     }
+    message[message_length] = '\0';
     return message;
 }
