@@ -39,8 +39,18 @@ int main(int argc, char **argv) {
     if (gray_scale == NULL){
         return 1;
     }
-    write_to_file(file2, btd->BMIH, btd->BMFH, gray_scale);
-
+//    write_to_file(file2, btd->BMIH, btd->BMFH, gray_scale);
+    unsigned char **hex_array = create_hex_array_from_pixels(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
+    if (hex_array == NULL){
+        return 1;
+    }
+    for (int i = 0; i < btd->BMIH->biHeight; i++){
+        for (int j = 0; j < btd->BMIH->biWidth; j++){
+            printf("%d ", hex_array[i][j]);
+        }
+        printf("\n");
+    }
+    destroy_hex_array(hex_array, btd->BMIH->biHeight);
     destroy_bitmapdata(btd);
     close_file(file);
     return 0;
