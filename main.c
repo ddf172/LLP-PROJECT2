@@ -3,6 +3,7 @@
 #include "Headers/Bitmap.h"
 #include "Headers/Histogram.h"
 #include "Headers/GrayScale.h"
+#include "Headers/Stegnography.h"
 
 
 int main(int argc, char **argv) {
@@ -31,25 +32,21 @@ int main(int argc, char **argv) {
     }
     read_pixels(file, btd);
 
-    FILE *file2 = create_file("test2.bmp");
-    if (file2 == NULL){
-        return 1;
-    }
-    PIXEL **gray_scale = create_gray_scale_pixel_array(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
-    if (gray_scale == NULL){
-        return 1;
-    }
+//    FILE *file2 = create_file("test2.bmp");
+//    if (file2 == NULL){
+//        return 1;
+//    }
+//    PIXEL **gray_scale = create_gray_scale_pixel_array(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
+//    if (gray_scale == NULL){
+//        return 1;
+//    }
 //    write_to_file(file2, btd->BMIH, btd->BMFH, gray_scale);
     unsigned char **hex_array = create_hex_array_from_pixels(btd->pixels, btd->BMIH->biHeight, btd->BMIH->biWidth);
     if (hex_array == NULL){
         return 1;
     }
-    for (int i = 0; i < btd->BMIH->biHeight; i++){
-        for (int j = 0; j < btd->BMIH->biWidth; j++){
-            printf("%d ", hex_array[i][j]);
-        }
-        printf("\n");
-    }
+    encode_char('a', hex_array[0], btd->BMIH->biWidth*3);
+
     destroy_hex_array(hex_array, btd->BMIH->biHeight);
     destroy_bitmapdata(btd);
     close_file(file);
