@@ -1,5 +1,16 @@
 #include "Headers/launcher.h"
 
+bool launch_validation(BITMAPDATA *btd){
+    if (btd == NULL){
+        return false;
+    }
+    if (btd->BMIH->biCompression != 0 || btd->BMIH->biBitCount != 24){
+        printf("Unsupported file\n");
+        return false;
+    }
+    return true;
+}
+
 BITMAPDATA *launch_read_bitmap(char *filename) {
     FILE *file = open_file(filename);
     if (file == NULL) {

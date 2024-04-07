@@ -7,6 +7,8 @@
 #include "Histogram.h"
 #include "GrayScale.h"
 
+
+extern bool launch_validation(BITMAPDATA *btd);
 extern BITMAPDATA *launch_read_bitmap(char *filename);
 extern void launch_headers_info(BITMAPFILEHEADER *BMFH, BITMAPINFOHEADER *BMIH);
 extern void launch_histogram(BITMAPDATA *btd);
